@@ -4,5 +4,5 @@
 
 Адаптировано для мобильных устройств.
 
-Смотреть онлайн (https://avavax.ru/src/1001/)
+![Screenshot](screenshot.jpg)
 
