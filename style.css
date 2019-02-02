@@ -1,0 +1,130 @@
+body {
+	margin: 0;
+}
+* {
+	box-sizing: border-box;
+}
+.wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+	font-family: Helvetica, sens-serif;
+	font-size: 1.3rem;
+}
+.title {
+	padding-top: 1.5rem;
+	font-size: 1.2rem;
+	text-align: center
+}
+#chessboard {
+	padding-top: 1.2rem;
+	margin: 0 auto;
+	max-width: 500px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cell {
+	display: flex;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	align-items: center;
+	transition: all 0.3s;
+}
+.cell:hover {
+	/*transform: scale(1.03);*/
+	/*background-color: rgba(0, 0, 0, 0.5);*/
+
+}
+.light {
+	background-color: #ecf0f1;
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #2c3e50;
+	transition: background-color 0.5s;
+}
+/*.light:hover {
+	background-color: #bdc3c7;
+}*/
+.dark {
+	background-color: #8e44ad;
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #ecf0f1;
+	transition: background-color 0.5s;
+}
+/*.dark:hover {
+	background-color: #9b59b6;
+}*/
+.top {
+	border-top: 2px solid #2c3e50;
+}
+.left {
+	border-left: 2px solid #2c3e50;
+}
+.right {
+	border-right: 2px solid #2c3e50;
+}
+.bottom {
+	border-bottom: 2px solid #2c3e50;
+}
+.knight {
+	background-image: url(knight.png);
+	background-size: 100%;
+}
+.rule {
+	display: flex;
+	padding: 2rem 2rem;
+	margin: 0 auto;
+	max-width: 500px;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+
+}
+button {
+	background-color: transparent;
+	color: #34495e;
+	padding: 0.8rem 3rem;
+	border: 1px solid #34495e;
+	border-radius: 0.8rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	outline: none;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+button:hover {
+	background-color: #8e44ad;
+	color: white;	
+	border: 1px solid #34495e;
+}
+@media (max-width: 520px) {
+	#chessboard {
+		max-width: 100vw;
+		max-height: 100vw;
+	}
+	.cell {
+		width: 10vw;
+		height: 10vw;
+		font-size: 1rem;
+	}
+
+}
+@media (max-width: 390px) {
+	#chessboard {
+		padding-top: 0;
+	}
+	.rule {
+		padding-top: 0.5rem;
+		/*display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;*/
+	}
+	button {
+		padding: 0.5rem 1rem;
+	}
+}
