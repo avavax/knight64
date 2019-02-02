@@ -4,7 +4,7 @@
 var $d = document;
 
 var $chessboard = $d.getElementById('chessboard');
-var $return = $d.getElementById('return');
+var $stepBack = $d.getElementById('return');
 var $clear = $d.getElementById('clear');
 var steps = [];
 
@@ -84,17 +84,9 @@ var board = {
 		}
 		horCaption('top');
 	}
-
-	/*getCoord: function(num) {
-		var result = {x:0, y:0};
-		result.y = Math.floor(num / 10);
-		result.x = num - 10 * result.y - 2;
-		result.y = 9 - result.y;
-		return result;
-	}*/
 };
 
-// Объект Конь. Свойства - текущее положение, метод - проверка на возможность перемщения
+// Объект Конь. Свойства - текущее положение, метод - проверка на возможность перемещения
 var knight = {
 	$currentKnight: '',
 	currentNum: 1,
@@ -162,12 +154,10 @@ var stepReward = function() {
 	steps[steps.length - 2].textContent = '';
 	steps.length--;	
 	knight.$currentKnight = steps[steps.length - 1];
-
-
 }
 
 $chessboard.addEventListener('click', addKnight);
 $clear.addEventListener('click', newGame);
-$return.addEventListener('click', stepReward);
+$stepBack.addEventListener('click', stepReward);
 
 board.draw();
