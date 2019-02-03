@@ -16,7 +16,7 @@ var board = {
 		var vertical = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
 		// Функция, которая добавляет на поле клеточку. 0 - белая, 1 - чёрная, 2 - прозрачная
-		var addCell = function(color = 2, caption = '', bord = 'none', x = 0, y = 0, num = 0) {
+		var addCell = function(color = 2, caption = '', bord = 'none', x = 0, y = 0) {
 			
 			var $newCell = $d.createElement('div');
 			$newCell.classList.add('cell');
@@ -53,9 +53,6 @@ var board = {
 			}
 			if (y) {
 				$newCell.setAttribute('y', y);
-			}
-			if (num) {
-				$newCell.setAttribute('num', 0);
 			}
 
 			$newCell.textContent = caption;
@@ -111,7 +108,7 @@ var knight = {
 }
 
 var addKnight = function(e) {
-	$currentDiv = e.target;
+	var $currentDiv = e.target;
 	
 	if (!statusGame) {
 		if (!e.target.getAttribute('x')) {
